@@ -1,6 +1,6 @@
 $(function() {
 
-    $("#subscribe input,#subscribe emailSub").jqBootstrapValidation({
+    $("#subscribe input,#subscribe email").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -11,7 +11,8 @@ $(function() {
             var email = $("input#emailSub").val();
 
             $.ajax({
-                url: "http://www.opportunity-web.com.br/subscribe.jsp",
+                url: "https://www.cyberoficina.com.br/subscribe",
+                //url: "http://localhost:8080/CyberOficina/subscribe",
                 type: "POST",
                 data: {
                     email: email
@@ -23,7 +24,7 @@ $(function() {
                     $('#successSubscribe > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#successSubscribe > .alert-success')
-                        .append("<strong>Em breve vocÃª receberÃ¡ nossas novidades! </strong>");
+                        .append("<strong>Em breve você receberá nossas novidades! </strong>");
                     $('#successSubscribe > .alert-success')
                         .append('</div>');
 
@@ -35,7 +36,7 @@ $(function() {
                     $('#successSubscribe').html("<div class='alert alert-danger'>");
                     $('#successSubscribe > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + firstName + ", aparentemente nossos servidores nÃ£o estÃ£o respondendo. Por favor tente novamente mais tarde!");
+                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe, aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
                     $('#successSubscribe > .alert-danger').append('</div>');
                     //clear all fields
                     $('#successSubscribe').trigger("reset");
