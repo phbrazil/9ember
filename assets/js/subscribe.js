@@ -1,6 +1,6 @@
 $(function() {
 
-    $("#subscribe input,#subscribe email").jqBootstrapValidation({
+    $("#subscribe input,#subscribe emailSub").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -29,7 +29,7 @@ $(function() {
                         .append('</div>');
 
                     //clear all fields
-                    $('#subscribe').trigger("reset");
+                    $('#successSubscribe').trigger("reset");
                 },
                 error: function() {
                     // Fail message
@@ -56,6 +56,6 @@ $(function() {
 
 
 /*When clicking on Full hide fail/success boxes */
-$('#email').focus(function() {
+$('#emailSub').focus(function() {
     $('#successSubscribe').html('');
 });
