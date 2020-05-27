@@ -1,1120 +1,473 @@
-	<!DOCTYPE html>
-	<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-		<head>
-			<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-			<meta name="description" content="">
-			<meta name="author" content="">
-			<title>9ember</title>
-			<!-- Bootstrap Core CSS -->
-			<link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
-			<!-- Retina.js - Load first for faster HQ mobile images. -->
-			<script src="assets/js/plugins/retina/retina.min.js"></script>
-			<!-- Font Awesome -->
-			<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-			<!-- Default Fonts -->
-			<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
-			<!-- Modern Style Fonts (Include these is you are using body.modern!) -->
-			<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
-			<!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
-			<link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
-			<!-- Plugin CSS -->
-			<link href="assets/css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
-			<link href="assets/css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
-			<link href="assets/css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
-			<link href="assets/css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
-			<link href="assets/css/plugins/background.css" rel="stylesheet" type="text/css">
-			<link href="assets/css/plugins/animate.css" rel="stylesheet" type="text/css">
-			<!-- Vitality Theme CSS -->
-			<!-- Uncomment the color scheme you want to use. -->
-			<!-- <link href="assets/css/vitality-red.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-aqua.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-blue.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-green.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-orange.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-pink.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-purple.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-tan.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-turquoise.css" rel="stylesheet" type="text/css"> -->
-			<!-- <link href="assets/css/vitality-yellow.css" rel="stylesheet" type="text/css"> -->
-			<!-- Style Switcher CSS - Demo Purposes Only! -->
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>9ember</title>
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <!-- Retina.js - Load first for faster HQ mobile images. -->
+        <script src="assets/js/plugins/retina/retina.min.js"></script>
+        <!-- Font Awesome -->
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Default Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+        <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+        <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
+        <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+        <!-- Plugin CSS -->
+        <link href="assets/css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/plugins/background.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/plugins/animate.css" rel="stylesheet" type="text/css">
 
-			<!--AQUI DEFIR A COR PADRAO DO SITE-->
+        <link id="changeable-colors" rel="stylesheet" href="assets/css/vitality-aqua.css">
+        <link href="assets/demo/style-switcher.css" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <!-- Alternate Body Classes: .modern and .vintage -->
 
-			<link id="changeable-colors" rel="stylesheet" href="assets/css/vitality-aqua.css">
-			<link href="assets/demo/style-switcher.css" rel="stylesheet">
-			<!-- IE8 support for HTML5 elements and media queries -->
-			<!--[if lt IE 9]>
-			  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-			<![endif]-->
-		</head>
-		<!-- Alternate Body Classes: .modern and .vintage -->
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav style="font-size: 1.2em; font-family: sans-serif;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Bem-vindo</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#process">Nossos processos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#team">Nosso time</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#work">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#follow">Assine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-		<body id="page-top">
-			<!-- Navigation -->
-			<!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
-			<nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Botão de navegação</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand page-scroll" href="#page-top">
-							<div class="brand-name"><strong>9ember</strong></div>
-							<!--img src="assets/img/logo.png" class="img-responsive" alt=""-->
-						</a>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="hidden">
-								<a class="page-scroll" href="#page-top"></a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#about">Sobre</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#process">Processos</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#work">Trabalhos</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#pricing">Valores</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#contact">Contato</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="https://www.9ember.com.br" target="_blank">Login Opportunity</a>
-							</li>
-						</ul>
-					</div>
-					<!-- /.navbar-collapse -->
-				</div>
-				<!-- /.container -->
-			</nav>
-			<header style="background-image: url('assets/img/bg-header.jpg');">
-				<div class="intro-content">
-					<img src="assets/img/logo.png" style='width: 50%; height: 50%' class="img-responsive img-centered" alt="">
-					<div class="brand-name">9ember</div>
-					<!--hr class="colored"-->
-					<div class="brand-name-subtext">Pense simples, crie grande</div>
-				</div>
-				<div class="scroll-down">
-					<a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
-				</div>
-			</header>
-			<section id="about">
-				<div class="container-fluid">
-					<div class="row text-center">
-						<div class="col-lg-12 wow fadeIn">
-							<!--h1>A Theme for Creatives &amp; Agencies</h1-->
-							<h2>Imagine os dados de sua empresa acessíveis de qualquer lugar e com segurança</h2>
-							<p>Pare de armazenar seus dados em planilhas do Excel ou papel e use-os de maneira segura, traduzida e simples na tomada de decisões.</p>
-							<hr class="colored">
-						</div>
-					</div>
-					<div class="row text-center content-row">
-						<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".2s">
-							<div class="about-content">
-								<i class="fa fa-eye fa-4x"></i>
-								<h3>Melhoria de Processos</h3>
-								<p>Oferecemos uma consultoria detalhada no levantamento das suas necessidades, melhoria e otimizações de processos.</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
-							<div class="about-content">
-								<i class="fa fa-edit fa-4x"></i>
-								<h3>Customização</h3>
-								<p>Nossas soluções são moldadas de acordo com a necessidade de cada negócio.</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
-							<div class="about-content">
-								<i class="fa fa-tablet fa-4x"></i>
-								<h3>Responsividade</h3>
-								<p>Nossos sistemas são desenvolvidos com as mais novas tecnologias responsivas.</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
-							<div class="about-content">
-								<i class="fa fa-clipboard fa-4x"></i>
-								<h3>Use seus dados a seu favor</h3>
-								<p>Com seus dados organizados e seguros, oferecemos uma visão detalhada ou olística do seu negócio.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="bg-gray">
-				<div class="container text-center wow fadeIn">
-					<div class="row">
-						<div class="col-lg-12">
-							<h2>Nosso time</h2>
-							<p>Somos um time de desenvolvedores com foco em tirar pequenas empresas do modo Offline.</p>
-							<hr class="colored">
-						</div>
-					</div>
-					<div class="row content-row">
-						<div class="col-lg-12">
-							<div class="about-carousel">
-								<div class="item">
-									<img style="width: 100%; height: 100%" src="assets/img/testimonials/1.jpg" class="img-responsive" alt="">
-									<div class="caption">
-										<h3>Paulo Bezerra</h3>
-										<hr class="colored">
-										<p>Desenvolvedor Fullstack Senior</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="https://www.facebook.com/paulo.henrique.bezerra.1990"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="https://github.com/phbrazil"><i class="fa fa-github fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="https://www.linkedin.com/in/paulo-bezerra-47411579/"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<img style="width: 100%; height: 100%" src="assets/img/testimonials/2.JPG" class="img-responsive" alt="">
-									<div class="caption">
-										<h3>Rafael Aquino</h3>
-										<hr class="colored">
-										<p>Desenvolvedor Front-End e Analista de Marketing Digital</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="https://www.facebook.com/rafael.aquino.11"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-twitter fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<img style="width: 100%; height: 100%" src="assets/img/testimonials/4.jpeg" class="img-responsive" alt="">
-										<div class="caption">
-										<h3>Reinaldo Paranhas</h3>
-										<hr class="colored">
-										<p>Analista SAP Business One</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="https://www.linkedin.com/in/reinaldo-paranhas-8a13762a/"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
+        <header style="background-image: url('assets/img/bg-header.jpg');">
+            <div class="intro-content">
+                <img src="assets/img/logo.png" style='width: 50%; height: 50%' class="img-responsive img-centered" alt="">
+                <div class="brand-name">9ember</div>
+                <div class="brand-name-subtext">Simplifique</div>
+            </div>
+            <div class="scroll-down">
+                <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
+            </div>
+        </header>
+        <section id="about">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-lg-12 wow fadeIn">
+                        <!--h1>A Theme for Creatives &amp; Agencies</h1-->
+                        <h2>Imagine os dados de sua empresa acessíveis de qualquer lugar e com segurança</h2>
+                        <p>Pare de armazenar seus dados em planilhas do Excel ou papel e use-os de maneira segura, traduzida e simples na tomada de decisões.</p>
+                    </div>
+                </div>
+                <div class="row text-center content-row">
+                    <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+                        <div class="about-content">
+                            <i class="fa fa-eye fa-4x"></i>
+                            <h3>Melhoria de Processos</h3>
+                            <p>Oferecemos uma consultoria detalhada no levantamento das suas necessidades, melhoria e otimizações de processos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+                        <div class="about-content">
+                            <i class="fa fa-edit fa-4x"></i>
+                            <h3>Customização</h3>
+                            <p>Nossas soluções são moldadas de acordo com a necessidade de cada negócio.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+                        <div class="about-content">
+                            <i class="fa fa-tablet fa-4x"></i>
+                            <h3>Responsividade</h3>
+                            <p>Nossos sistemas são desenvolvidos com as mais novas tecnologias responsivas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
+                        <div class="about-content">
+                            <i class="fa fa-clipboard fa-4x"></i>
+                            <h3>Use seus dados a seu favor</h3>
+                            <p>Com seus dados organizados e seguros, oferecemos uma visão detalhada ou olística do seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-											<li>
-												<a href="#"><i class="fa fa-twitter fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<img style="width: 100%; height: 100%" src="assets/img/testimonials/3.JPG" class="img-responsive" alt="">
-									<div class="caption">
-										<h3>Neilton Santos</h3>
-										<hr class="colored">
-										<p>Representante Comercial</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="https://www.facebook.com/neilton.santos.524"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-twitter fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-dribbble fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!--div class="item">
-									<img src="assets/img/people/4.jpg" class="img-responsive" alt="">
-									<div class="caption">
-										<h3>Amy Vanderbute</h3>
-										<hr class="colored">
-										<p>Graphic Artist</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="#"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-twitter fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-dribbble fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<img src="assets/img/people/5.jpg" class="img-responsive" alt="">
-									<div class="caption">
-										<h3>Jeremy Davidson</h3>
-										<hr class="colored">
-										<p>Web Developer</p>
-										<ul class="list-inline social">
-											<li>
-												<a href="#"><i class="fa fa-facebook fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-twitter fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="fa fa-github fa-fw"></i></a>
-											</li>
-										</ul>
-									</div>
-								</div-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<aside class="cta-quote" style="background-image: url('assets/img/bg-aside.jpg');">
-				<div class="container wow fadeIn">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<span class="quote">Se está <span class="text-primary">difícil</span> provavelmente há algo  <span class="text-primary">errado</span> e nós ajudamos a <span class="text-primary">simplificar</span>.</span>
-							<hr class=" colored">
-							<a class="btn btn-outline-light page-scroll" href="#contact">Vamos tentar</a>
-						</div>
-					</div>
-				</div>
-			</aside>
-			<section id="process" class="services">
-				<div class="container">
-					<div class="row text-center">
-						<div class="col-lg-12 wow fadeIn">
-							<h2>Nossos processos</h2>
-							<hr class="colored">
-							<p>Como desenvolvemos nossos projetos</p>
-						</div>
-					</div>
-					<div class="row content-row">
-						<div class="col-md-4 wow fadeIn" data-wow-delay=".2s">
-							<div class="media">
-								<div class="pull-left">
-									<i class="fa fa-clipboard"></i>
-								</div>
-								<div class="media-body">
-									<h3 class="media-heading">Planejar</h3>
-									<ul>
-										<li>Entrevistas com usuários e interessados</li>
-										<li>Coleta de dados</li>
-										<li>Desenho do processo</li>
-										<li>Criação de Wireframes (protótipos)</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 wow fadeIn" data-wow-delay=".4s">
-							<div class="media">
-								<div class="pull-left">
-									<i class="fa fa-pencil"></i>
-								</div>
-								<div class="media-body">
-									<h3 class="media-heading">Criar</h3>
-									<ul>
-										<li>Estudo da melhor tecnologia</li>
-										<li>Desenvolvimento de código</li>
-										<li>Versão Demo</li>
-										<li>Coleta de feedback do cliente</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 wow fadeIn" data-wow-delay=".6s">
-							<div class="media">
-								<div class="pull-left">
-									<i class="fa fa-rocket"></i>
-								</div>
-								<div class="media-body">
-									<h3 class="media-heading">Lançar</h3>
-									<ul>
-										<li>Implantação do sistema/site</li>
-										<li>Marketing Digital</li>
-										<li>Análise de ROI (Return Over Investment)</li>
-										<li>Manutenção periódica</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="work" class="bg-gray">
-				<div class="container text-center wow fadeIn">
-					<h2>Nossos Produtos</h2>
-					<hr class="colored">
-					<p>Conheça nossos produtos customizáveis</p>
-				</div>
-			</section>
-			<section class="portfolio-carousel wow fadeIn">
-				<div class="item" style="background-image: url('assets/img/portfolio/bg-1.jpg')">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-md-push-8">
-								<div class="project-details">
-									<img src="assets/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
-									<span class="project-name">Opportunity</span>
-									<span class="project-description">Gerencie seus projetos com foco estratégico e não somente foco operacional.</span>
-									<hr class="colored">
-									<a href="#portfolioModal1" data-toggle="modal" class="btn btn-outline-light">Ver Detalhes <i class="fa fa-long-arrow-right fa-fw"></i></a>
-								</div>
-							</div>
-							<div class="col-md-8 col-md-pull-4 hidden-xs">
-								<img src="assets/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item" style="background-image: url('assets/img/portfolio/bg-2.jpg')">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-md-push-8">
-								<div class="project-details">
-									<img src="assets/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
-									<span class="project-name">ERPortable</span>
-									<span class="project-description">Mini ERP focado em micro e pequenas empresas.</span>
-									<hr class="colored">
-									<a href="#portfolioModal2" data-toggle="modal" class="btn btn-outline-light">Ver Detalhes <i class="fa fa-long-arrow-right fa-fw"></i></a>
-								</div>
-							</div>
-							<div class="col-md-8 col-md-pull-4 hidden-xs">
-								<img src="assets/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--div class="item" style="background-image: url('assets/img/portfolio/bg-3.jpg')">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-md-push-8">
-								<div class="project-details">
-									<img src="assets/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
-									<span class="project-name">Project Name</span>
-									<span class="project-description">Branding, Website Design</span>
-									<hr class="colored">
-									<a href="#portfolioModal3" data-toggle="modal" class="btn btn-outline-light">Ver Detalhes <i class="fa fa-long-arrow-right fa-fw"></i></a>
-								</div>
-							</div>
-							<div class="col-md-8 col-md-pull-4 hidden-xs">
-								<img src="assets/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item" style="background-image: url('assets/img/portfolio/bg-4.jpg')">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-md-push-8">
-								<div class="project-details">
-									<img src="assets/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
-									<span class="project-name">Project Name</span>
-									<span class="project-description">Branding, Website Design</span>
-									<hr class="colored">
-									<a href="#portfolioModal4" data-toggle="modal" class="btn btn-outline-light">Ver Detalhes <i class="fa fa-long-arrow-right fa-fw"></i></a>
-								</div>
-							</div>
-							<div class="col-md-8 col-md-pull-4 hidden-xs">
-								<img src="assets/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
-							</div>
-						</div>
-					</div>
-				</div-->
-			</section>
-			<!--section>
-				<div class="container text-center wow fadeIn">
-					<h2>Portfólio</h2>
-					<hr class="colored">
-					<p>Outros projetos que trabalhamos.</p>
-					<div class="row content-row">
-						<div class="col-lg-12">
-							<div class="portfolio-filter">
-								<ul id="filters" class="clearfix">
-									<li>
-										<span class="filter active" data-filter="identity graphic logo web">Todos</span>
-									</li>
-									<li>
-										<span class="filter" data-filter="identity">Identity</span>
-									</li>
-									<li>
-										<span class="filter" data-filter="graphic">Graphic</span>
-									</li>
-									<li>
-										<span class="filter" data-filter="web">Web</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<div id="portfoliolist">
-								<div class="portfolio identity" data-cat="identity" href="#portfolioModal1" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/identity/1.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Generic Inc.</a>
-												<span class="text-category">Brand Identity</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio web" data-cat="web" href="#portfolioModal2" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/web/1.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Brands</a>
-												<span class="text-category">Web Development</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio graphic" data-cat="graphic" href="#portfolioModal3" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/graphic/1.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Excellence</a>
-												<span class="text-category">Poster Design</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio web" data-cat="web" href="#portfolioModal4" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/web/2.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">YouTV</a>
-												<span class="text-category">Web Development</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio graphic" data-cat="graphic" href="#portfolioModal1" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/graphic/2.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Office Supplies</a>
-												<span class="text-category">Graphic Design</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio web" data-cat="web" href="#portfolioModal2" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/web/3.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Fooder</a>
-												<span class="text-category">Mobile App</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio graphic" data-cat="graphic" href="#portfolioModal3" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/graphic/3.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Mountain Tea</a>
-												<span class="text-category">Graphic Design</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio graphic" data-cat="graphic" href="#portfolioModal4" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/graphic/4.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Checkmark</a>
-												<span class="text-category">Graphic Design</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio identity" data-cat="identity" href="#portfolioModal1" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/identity/2.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Demish</a>
-												<span class="text-category">Brand Identity</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio web" data-cat="web" href="#portfolioModal2" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/web/4.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">OneRepublic</a>
-												<span class="text-category">Web Development</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio graphic" data-cat="graphic" href="#portfolioModal3" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/graphic/5.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Postable</a>
-												<span class="text-category">Graphic Design</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio identity" data-cat="identity" href="#portfolioModal4" data-toggle="modal">
-									<div class="portfolio-wrapper">
-										<img src="assets/img/portfolio/grid/identity/3.jpg" alt="">
-										<div class="caption">
-											<div class="caption-text">
-												<a class="text-title">Simpli Nota</a>
-												<span class="text-category">Brand Identity</span>
-											</div>
-											<div class="caption-bg"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section-->
-			<section class="testimonials bg-gray">
-				<div class="container wow fadeIn">
-					<div class="row">
-						<div class="col-lg-10 col-lg-offset-1">
-							<div class="testimonials-carousel">
-								<!--div class="item">
-									<div class="row">
-										<div class="col-lg-12">
-											<p class="lead">"Working with Vitality was both a valuable and rewarding experience."</p>
-											<hr class="colored">
-											<p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, temporibus, laborum, dignissimos doloremque corporis alias nostrum recusandae culpa id quisquam harum impedit sed sunt non obcaecati vero ipsam aut fugit?</p>
-											<div class="testimonial-info">
-												<div class="testimonial-img">
-													<img src="assets/img/testimonials/1.jpg" class="img-circle img-responsive" alt="">
-												</div>
-												<div class="testimonial-author">
-													<span class="name">Paulo Bezerra</span>
-													<p class="small">CEO da 9ember</p>
-													<div class="stars">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div-->
-								<div class="item">
-									<div class="row">
-										<div class="col-lg-12">
-											<p class="lead">"Nada paga ver a reação das pessoas usando algo que criamos"</p>
-											<hr class="colored">
-											<p class="quote">Podemos ajudar sua empresa a ter uma visão mais ampla do seu negócio.</p>
-											<div class="testimonial-info">
-												<div class="testimonial-img">
-													<img src="assets/img/testimonials/1.jpg" class="img-circle img-responsive" alt="">
-												</div>
-												<div class="testimonial-author">
-													<span class="name">Paulo Bezerra</span>
-													<p class="small">CEO da 9ember</p>
-													<div class="stars">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="pricing" class="pricing" style="background-image: url('assets/img/bg-pricing.jpg')">
-				<div class="container wow fadeIn">
-					<div class="row text-center">
-						<div class="col-lg-12">
-							<h2>Valores</h2>
-							<hr class="colored">
-							<p>Os valores abaixo não incluem as customizações e hospedagem.</p>
-						</div>
-					</div>
-					<div class="row content-row">
-						<div class="col-md-4">
-							<div class="pricing-item featured-first">
-								<h3>Básico</h3>
-								<hr class="colored">
-								<div class="price"><span class="number"><sup>R$</sup>1.000</span> / Mês</div>
-								<ul class="list-group">
-									<li class="list-group-item">50 Usuários</li>
-									<li class="list-group-item">Scores Ilimitados</li>
-									<li class="list-group-item">Projetos Ilimitados</li>
-									<li class="list-group-item">Acesso à todos Dashboards</li>
-									<li class="list-group-item">50 GB de Banco de Dados</li>
-									<li class="list-group-item">Suporte Ilimitado</li>
-								</ul>
-								<a href="#" class="btn btn-outline-dark">Sign Up</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="pricing-item featured">
-								<h3>Plus</h3>
-								<hr class="colored">
-								<div class="price"><span class="number"><sup>R$</sup>2.000</span> / Mês</div>
-								<ul class="list-group">
-									<li class="list-group-item">150 Usuários</li>
-									<li class="list-group-item">Scores Ilimitados</li>
-									<li class="list-group-item">Projetos Ilimitados</li>
-									<li class="list-group-item">Acesso à todos Dashboards</li>
-									<li class="list-group-item">50 GB de Banco de Dados</li>
-									<li class="list-group-item">Suporte Ilimitado</li>
-								</ul>
-								<a href="#" class="btn btn-outline-dark">Sign Up</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="pricing-item featured-last">
-								<h3>Premium</h3>
-								<hr class="colored">
-								<div class="price"><span class="number"><sup>R$</sup>3.000</span> / Mês</div>
-								<ul class="list-group">
-									<li class="list-group-item">Usuários Ilimitados</li>
-									<li class="list-group-item">Scores Ilimitados</li>
-									<li class="list-group-item">Projetos Ilimitados</li>
-									<li class="list-group-item">Acesso à todos Dashboards</li>
-									<li class="list-group-item">50 GB de Banco de Dados</li>
-									<li class="list-group-item">Suporte Ilimitado</li>
-								</ul>
-								<a href="#" class="btn btn-outline-dark">Sign Up</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="cta-form bg-dark">
-				<div class="container text-center">
-					<h3>Assine para receber novidades!</h3>
-					<hr class="colored">
-					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2">
-							<!-- MailChimp Signup Form -->
-							<div id="mc_embed_signup">
-								<!-- Replace the form action in the line below with your MailChimp embed action! For more informatin on how to do this please visit the Docs! -->
-								<form role="form" id="subscribe" name="subscribe">
-									<div class="input-group input-group-lg">
-										<input type="email" name="emailSub" class="form-control" id="emailSub" placeholder="Email..." required>
-										<span class="input-group-btn">
-											<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Assinar!</button>
-										</span>
-									</div>
-									<div id="mce-responses">
-										<div id="successSubscribe"></div>
-									</div>
-								</form>
-							</div>
-							<!-- End MailChimp Signup Form -->
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="contact">
-				<div class="container wow fadeIn">
-					<div class="row">
-						<div class="col-lg-12 text-center">
-							<h2>Contate-nos</h2>
-							<hr class="colored">
-							<p>Por favor nos conte sobre seu próximo projeto para que possamos te ajudar.</p>
-						</div>
-					</div>
-					<div class="row content-row">
-						<div class="col-lg-8 col-lg-offset-2">
-							<form name="sentMessage" id="contactForm">
-								<div class="row control-group">
-									<div class="form-group col-xs-12 floating-label-form-group controls">
-										<label>Nome</label>
-										<input type="text" maxlength="100" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Favor inserir seu nome.">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="row control-group">
-									<div class="form-group col-xs-12 floating-label-form-group controls">
-										<label>Email</label>
-										<input type="email" maxlength="60" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Favor inserir seu Email.">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="row control-group">
-									<div class="form-group col-xs-12 floating-label-form-group controls">
-										<label>Telefone</label>
-										<input onkeydown="javascript: fMasc(this, mTel);" maxlength="20" type="tel" class="form-control" placeholder="Telefone" id="phone" required data-validation-required-message="Favor inserir seu telefone.">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="row control-group">
-									<div class="form-group col-xs-12 floating-label-form-group controls">
-										<label>Mensagem</label>
-										<textarea  maxlength="500" rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Favor inserir sua mensagem."></textarea>
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<br>
-								<div id="success"></div>
-								<div class="row">
-									<div class="form-group col-xs-12">
-										<button type="submit" class="btn btn-outline-dark">Enviar</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-			<footer class="footer" style="background-image: url('assets/img/bg-footer.jpg')">
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-md-4 contact-details">
-							<h4><i class="fa fa-phone"></i> Ligue</h4>
-							<p>(11) 98199-7228</p>
-						</div>
-						<div class="col-md-4 contact-details">
-							<h4><i class="fa fa-map-marker"></i> Visite</h4>
-							<p>Av. Eng. Eusébio Stevaux, 823 - Santo Amaro
-								<br>São Paulo, SP 04696-000</p>
-						</div>
-						<div class="col-md-4 contact-details">
-							<h4><i class="fa fa-envelope"></i> Email</h4>
-							<p><a href="mailto:mail@example.com">pauloh2012sul@gmail.com</a>
-							</p>
-						</div>
-					</div>
-					<div class="row social">
-						<div class="col-lg-12">
-							<ul class="list-inline">
-								<li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
-								</li>
-								<li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
-								</li>
-								<li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="row copyright">
-						<div class="col-lg-12">
-							<p class="small">&copy; 2019 9ember</p>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- Portfolio Modals -->
-			<!-- Example Modal 1 -->
-			<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-1.jpg')">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl">
-							</div>
-						</div>
-					</div>
-					<div class="modal-body">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8 col-lg-offset-2">
-									<img src="assets/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-									<h2>Opportunity</h2>
-									<hr class="colored">
-									<p>Imagine saber de forma rápida e inteligente se sua nova proposta de projeto se alinha à estratégia da sua empresa antes de aceitá-lo?</p>
-								</div>
-								<div class="col-lg-12">
-									<img src="assets/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-								</div>
-								<div class="col-lg-8 col-lg-offset-2">
-									<ul class="list-inline item-details">
-										<li>Linguagem: <strong><a href="http://startbootstrap.com">Java</a></strong>
-										</li>
-										<li>Criado em: <strong><a href="http://startbootstrap.com">Junho 2018</a></strong>
-										</li>
-										<li>Serviço: <strong><a href="http://startbootstrap.com">Web</a></strong>
-										</li>
-									</ul>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Example Modal 2 -->
-			<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-2.jpg')">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl">
-							</div>
-						</div>
-					</div>
-					<div class="modal-body">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8 col-lg-offset-2">
-									<img src="assets/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-									<h2>ERPortable</h2>
-									<hr class="colored">
-									<p>O ERPortable é um mini ERP focado em micro e pequenas empresas que não podem contratar um ERP tradicional do mercado pelo alto custo.</p>
-								</div>
-								<div class="col-lg-12">
-									<img src="assets/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-								</div>
-								<div class="col-lg-8 col-lg-offset-2">
-									<ul class="list-inline item-details">
-										<li>Linguagem: <strong><a href="http://startbootstrap.com">Java</a></strong>
-										</li>
-										<li>Criado em: <strong><a href="http://startbootstrap.com">Junho 2019</a></strong>
-										</li>
-										<li>Serviço: <strong><a href="http://startbootstrap.com">Web</a></strong>
-										</li>
-									</ul>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Example Modal 3 -->
-			<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-3.jpg')">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl">
-							</div>
-						</div>
-					</div>
-					<div class="modal-body">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8 col-lg-offset-2">
-									<img src="assets/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-									<h2>Project Title</h2>
-									<hr class="colored">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-								</div>
-								<div class="col-lg-12">
-									<img src="assets/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-								</div>
-								<div class="col-lg-8 col-lg-offset-2">
-									<ul class="list-inline item-details">
-										<li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-										</li>
-										<li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-										</li>
-										<li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-										</li>
-									</ul>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Example Modal 4 -->
-			<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-4.jpg')">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl">
-							</div>
-						</div>
-					</div>
-					<div class="modal-body">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8 col-lg-offset-2">
-									<img src="assets/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-									<h2>Project Title</h2>
-									<hr class="colored">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-								</div>
-								<div class="col-lg-12">
-									<img src="assets/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-								</div>
-								<div class="col-lg-8 col-lg-offset-2">
-									<ul class="list-inline item-details">
-										<li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-										</li>
-										<li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-										</li>
-										<li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-										</li>
-									</ul>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Style Switcher - FOR DEMO PURPOSES ONLY -->
-			<div id="style-switcher" class="close-style-switcher animated bounce">
-				<!--Panel Button -->
-				<a class="panel-button"><i class="fa fa-gear"></i></a>
-				<!-- Colors -->
-				<div class="segment">
-					<h4>Altere as cores</h4>
-					<a title="vitality-aqua" class="switcher aqua-bg"></a>
-					<a title="vitality-red" class="switcher red-bg"></a>
-					<a title="vitality-orange" class="switcher orange-bg"></a>
-					<a title="vitality-yellow" class="switcher yellow-bg"></a>
-					<a title="vitality-green" class="switcher green-bg"></a>
-					<a title="vitality-turquoise" class="switcher turquoise-bg"></a>
-					<a title="vitality-blue" class="switcher blue-bg"></a>
-					<a title="vitality-purple" class="switcher purple-bg"></a>
-					<a title="vitality-pink" class="switcher pink-bg"></a>
-					<a title="vitality-tan" class="switcher tan-bg"></a>
-				</div>
+        <section id="process" class="services">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12 wow fadeIn">
+                        <h2 class='text-muted'>Nossos processos</h2>
+                        <p>Como desenvolvemos nossos projetos</p>
+                    </div>
+                </div>
+                <div class="row content-row">
+                    <div class="col-md-4 wow fadeIn" data-wow-delay=".2s">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-clipboard"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Planejar</h3>
+                                <ul>
+                                    <li>Entrevistas com usuários e interessados</li>
+                                    <li>Coleta de dados</li>
+                                    <li>Desenho do processo</li>
+                                    <li>Criação de Wireframes (protótipos)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeIn" data-wow-delay=".4s">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Criar</h3>
+                                <ul>
+                                    <li>Estudo da melhor tecnologia</li>
+                                    <li>Desenvolvimento de código</li>
+                                    <li>Versão Demo</li>
+                                    <li>Coleta de feedback do cliente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeIn" data-wow-delay=".6s">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Lançar</h3>
+                                <ul>
+                                    <li>Implantação do sistema/site</li>
+                                    <li>Marketing Digital</li>
+                                    <li>Análise de ROI (Return Over Investment)</li>
+                                    <li>Manutenção periódica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray" id='team'>
+            <div class="container text-center wow fadeIn">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class='text-muted'>Nosso time</h2>
+                        <p>Somos um time de desenvolvedores com foco em tirar pequenas empresas do modo Offline.</p>
+                    </div>
+                </div>
+                <div class="row content-row">
+                    <div class="col-lg-12">
+                        <div class="about-carousel">
+                            <div class="item">
+                                <img style="width: 100%; height: 100%" src="assets/img/testimonials/1.jpg" class="img-responsive" alt="">
+                                <div class="caption">
+                                    <h3>Paulo Bezerra</h3>
+                                    <hr class="colored">
+                                    <p>Desenvolvedor Fullstack Senior</p>
+                                    <ul class="list-inline social">
+                                        <li>
+                                            <a href="https://www.facebook.com/paulo.henrique.bezerra.1990"><i class="fa fa-facebook fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/phbrazil"><i class="fa fa-github fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/paulo-bezerra-47411579/"><i class="fa fa-linkedin fa-fw"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img style="width: 100%; height: 100%" src="assets/img/testimonials/2.JPG" class="img-responsive" alt="">
+                                <div class="caption">
+                                    <h3>Rafael Aquino</h3>
+                                    <hr class="colored">
+                                    <p>Desenvolvedor Front-End e Analista de Marketing Digital</p>
+                                    <ul class="list-inline social">
+                                        <li>
+                                            <a href="https://www.facebook.com/rafael.aquino.11"><i class="fa fa-facebook fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img style="width: 100%; height: 100%" src="assets/img/testimonials/4.jpeg" class="img-responsive" alt="">
+                                <div class="caption">
+                                    <h3>Reinaldo Paranhas</h3>
+                                    <hr class="colored">
+                                    <p>Analista SAP Business One</p>
+                                    <ul class="list-inline social">
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/reinaldo-paranhas-8a13762a/"><i class="fa fa-linkedin fa-fw"></i></a>
+                                        </li>
 
-			</div>
-			<!-- End Style Switcher -->
-			<!-- Core Scripts -->
-			<script src="assets/js/jquery.js"></script>
-			<script src="assets/js/bootstrap/bootstrap.min.js"></script>
-			<!-- Plugin Scripts -->
-			<script src="assets/js/plugins/jquery.easing.min.js"></script>
-			<script src="assets/js/plugins/classie.js"></script>
-			<script src="assets/js/plugins/cbpAnimatedHeader.js"></script>
-			<script src="assets/js/plugins/owl-carousel/owl.carousel.js"></script>
-			<script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-			<script src="assets/js/plugins/background/core.js"></script>
-			<script src="assets/js/plugins/background/transition.js"></script>
-			<script src="assets/js/plugins/background/background.js"></script>
-			<script src="assets/js/plugins/jquery.mixitup.js"></script>
-			<script src="assets/js/plugins/wow/wow.min.js"></script>
-			<script src="assets/js/contact_me.js"></script>
-			<script src="assets/js/subscribe.js"></script>
-			<script src="assets/js/plugins/jqBootstrapValidation.js"></script>
-			<!-- Vitality Theme Scripts -->
-			<script src="assets/js/vitality.js"></script>
-			<!-- Style Switcher Scripts - Demo Purposes Only! -->
-			<script src="assets/demo/style.switcher.js"></script>
-			<script type="text/javascript">
-											function fMasc(objeto, mascara) {
-												obj = objeto
-												masc = mascara
-												setTimeout("fMascEx()", 1)
-											}
-											function fMascEx() {
-												obj.value = masc(obj.value)
-											}
-											function mTel(tel) {
-												tel = tel.replace(/\D/g, "")
-												tel = tel.replace(/^(\d)/, "($1")
-												tel = tel.replace(/(.{3})(\d)/, "$1)$2")
-												if (tel.length == 9) {
-													tel = tel.replace(/(.{1})$/, "-$1")
-												} else if (tel.length == 10) {
-													tel = tel.replace(/(.{2})$/, "-$1")
-												} else if (tel.length == 11) {
-													tel = tel.replace(/(.{3})$/, "-$1")
-												} else if (tel.length == 12) {
-													tel = tel.replace(/(.{4})$/, "-$1")
-												} else if (tel.length > 12) {
-													tel = tel.replace(/(.{4})$/, "-$1")
-												}
-												return tel;
-											}
-											function mCNPJ(cnpj) {
-												cnpj = cnpj.replace(/\D/g, "")
-												cnpj = cnpj.replace(/^(\d{2})(\d)/, "$1.$2")
-												cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3")
-												cnpj = cnpj.replace(/\.(\d{3})(\d)/, ".$1/$2")
-												cnpj = cnpj.replace(/(\d{4})(\d)/, "$1-$2")
-												return cnpj
-											}
-											function mCPF(cpf) {
-												cpf = cpf.replace(/\D/g, "")
-												cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
-												cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
-												cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
-												return cpf
-											}
-											function mRG(rg) {
-												rg = rg.replace(/\D/g, "")
-												rg = rg.replace(/(\d{2})(\d)/, "$1.$2")
-												rg = rg.replace(/(\d{3})(\d)/, "$1.$2")
-												rg = rg.replace(/(\d{3})(\d{1})$/, "$1-$2")
-												return rg
-											}
-											function mCEP(cep) {
-												cep = cep.replace(/\D/g, "")
-												cep = cep.replace(/^(\d{2})(\d)/, "$1$2")
-												cep = cep.replace(/\.(\d{3})(\d)/, ".$1$2")
-												return cep
-											}
-											function mNum(num) {
-												num = num.replace(/\D/g, "")
-												return num
-											}
-			</script>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook fa-fw"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img style="width: 100%; height: 100%" src="assets/img/testimonials/3.JPG" class="img-responsive" alt="">
+                                <div class="caption">
+                                    <h3>Neilton Santos</h3>
+                                    <hr class="colored">
+                                    <p>Representante Comercial</p>
+                                    <ul class="list-inline social">
+                                        <li>
+                                            <a href="https://www.facebook.com/neilton.santos.524"><i class="fa fa-facebook fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-dribbble fa-fw"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		</body>
 
-	</html>
+        <section id="work" class="bg-gray">
+            <div class="container text-center wow fadeIn">
+                <h2 class='text-muted'>Nossos Produtos</h2>
+                <p>Conheça nossos produtos customizáveis</p>
+            </div>
+            <div class="container">
+                <div class="card-deck mb-3 text-center">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header bg-dark">
+                            <h4 class="my-0 font-weight-normal">Cyber Oficina</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><img src='assets/img/cyber.png' style="width: 100px"></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Site totalmente responsivo que</li>
+                                <li>te ajuda a encontrar especialistas</li>
+                                <li>para seu veículo em sua região</li>
+                            </ul>
+                            <a class="btn btn-lg btn-block btn-outline-primary" href='https://www.cyberoficina.com.br' target="_blank">Quero conhecer</a>
+                        </div>
+                    </div>
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header" style="background-color: #B22222">
+                            <h4 class="my-0 font-weight-normal text-light">Flex Stats</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><img src='assets/img/flex.png' style="width: 120px"></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Sistema gerenciador de Leads</li>
+                                <li>com foco estratético</li>
+                                <li>e análise de projetos</li>
+                                <li>com base no <a href='https://pt.wikipedia.org/wiki/Balanced_scorecard' target="_blank">BSC</a></li>
+                                <li>integrado com Dashboards online e Timesheet do time</li>
+                            </ul>
+                            <a class="btn btn-lg btn-block btn-outline-primary" href='https://www.flexstats.com.br' target="_blank">Quero conhecer</a>
+                        </div>
+                    </div>
+                    <!--div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                        </div>
+                    </div-->
+                </div>
+            </div>
+        </section>
+
+        <section id="follow" class="signup-section bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <h2 class="text-white mb-5">Assine para receber atualizações</h2>
+                        <form role="form" id="subscribe" name="subscribe">
+                            <div class="input-group input-group-lg">
+                                <input type="email" name="emailSub" class="form-control" id="emailSub" placeholder="Email..." required>
+                                <span class="input-group-btn">
+                                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Assinar!</button>
+                                </span>
+                            </div>
+                            <div id="mce-responses">
+                                <div id="successSubscribe"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class='text-muted'>Contate-nos</h2>
+                        <p>Por favor nos conte sobre seu próximo projeto para que possamos te ajudar.</p>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <form name="sentMessage" id="contactForm">
+                        <div class="row">
+                            <div class="col-md-12 floating-label-form-group">
+                                <label>Nome</label>
+                                <input type="text" maxlength="100" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Favor inserir seu nome.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 floating-label-form-group">
+                                <label>Email</label>
+                                <input type="email" maxlength="60" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Favor inserir seu Email.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 floating-label-form-group">
+                                <label>Telefone</label>
+                                <input onkeydown="javascript: fMasc(this, mTel);" maxlength="20" type="tel" class="form-control" placeholder="Telefone" id="phone" required data-validation-required-message="Favor inserir seu telefone.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 floating-label-form-group">
+                                <label>Mensagem</label>
+                                <textarea  maxlength="500" rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Favor inserir sua mensagem."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" style="background-image: url('assets/img/bg-footer.jpg')">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4 contact-details">
+                        <h4><i class="fa fa-phone"></i> Ligue</h4>
+                        <p>(11) 98199-7228</p>
+                    </div>
+                    <div class="col-md-4 contact-details">
+                        <h4><i class="fa fa-map-marker"></i> Visite</h4>
+                        <p>Av. Eng. Eusébio Stevaux, 823 - Santo Amaro
+                            <br>São Paulo, SP 04696-000</p>
+                    </div>
+                    <div class="col-md-4 contact-details">
+                        <h4><i class="fa fa-envelope"></i> Email</h4>
+                        <p><a href="mailto:mail@example.com">paulo.henriqueb@me.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row social">
+                    <div class="col-lg-12">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x mb-4"></i> Facebook</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i> Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row copyright">
+                    <div class="col-lg-12">
+                        <p class="small">&copy; 2019 9ember</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Style Switcher -->
+        <!-- Core Scripts -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <!-- Plugin Scripts -->
+        <script src="assets/js/plugins/jquery.easing.min.js"></script>
+        <script src="assets/js/plugins/classie.js"></script>
+        <script src="assets/js/plugins/cbpAnimatedHeader.js"></script>
+        <script src="assets/js/plugins/owl-carousel/owl.carousel.js"></script>
+        <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/plugins/background/core.js"></script>
+        <script src="assets/js/plugins/background/transition.js"></script>
+        <script src="assets/js/plugins/background/background.js"></script>
+        <script src="assets/js/plugins/jquery.mixitup.js"></script>
+        <script src="assets/js/plugins/wow/wow.min.js"></script>
+        <script src="assets/js/contact_me.js"></script>
+        <script src="assets/js/subscribe.js"></script>
+        <script src="assets/js/plugins/jqBootstrapValidation.js"></script>
+        <!-- Vitality Theme Scripts -->
+        <script src="assets/js/vitality.js"></script>
+        <!-- Style Switcher Scripts - Demo Purposes Only! -->
+        <script src="assets/demo/style.switcher.js"></script>
+
+    </body>
+
+</html>
