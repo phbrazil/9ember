@@ -24,7 +24,7 @@ $(function () {
                     $('#successSubscribe > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
                     $('#successSubscribe > .alert-success')
-                            .append("<strong>Obrigado! Em breve vocÃª receberÃ¡ nossas novidades. </strong>");
+                            .append("<strong>Obrigado! Em breve você receberá nossas novidades. </strong>");
                     $('#successSubscribe > .alert-success')
                             .append('</div>');
                     $('#successSubscribe').delay(5000).fadeOut('slow');
@@ -37,7 +37,7 @@ $(function () {
                     $('#successSubscribe').html("<div class='alert alert-danger'>");
                     $('#successSubscribe > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
-                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + email + ", aparentemente nossos servidores nÃ£o estÃ£o respondendo. Por favor tente novamente mais tarde!");
+                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + email + ", aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
                     $('#successSubscribe > .alert-danger').append('</div>');
                     //clear all fields
                     $('#subscribe').trigger("reset");

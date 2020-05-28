@@ -1,11 +1,11 @@
-$(function() {
+$(function () {
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function($form, event, errors) {
+        submitError: function ($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: function($form, event) {
+        submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var name = $("input#name").val();
@@ -18,7 +18,8 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://www.9ember.com.br/mensagens.jsp",
+                url: "https://www.cyberoficina.com.br/contact",
+                //url: "http://localhost:8080/CyberOficina/contact",
                 type: "POST",
                 data: {
                     name: name,
@@ -27,51 +28,40 @@ $(function() {
                     message: message
                 },
                 cache: false,
-                success: function() {
+                success: function () {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
+                            .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Sua mensagem foi enviada. Obrigado! </strong>");
+                            .append("<strong>Sua mensagem foi enviada. Obrigado! </strong>");
                     $('#success > .alert-success')
-                        .append('</div>');
+                            .append('</div>');
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
-                    
-                      // Success message
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-danger')
-                        .append("<strong>Ocorreu um erro, tente novamente mais tarde! </strong>");
-                    $('#success > .alert-danger')
-                        .append('</div>');
+                error: function () {
 
-                    //clear all fields
-                    //$('#contactForm').trigger("reset");
-                    
-                    /*
-                    // Fail message
+                    // Success message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Desculpe " + firstName + ", aparentemente nossos servidores n�o est�o respondendo. Por favor tente novamente mais tarde!");
-                    $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#contactForm').trigger("reset");*/
+                            .append("</button>");
+                    $('#success > .alert-danger')
+                            .append("<strong>Ocorreu um erro, tente novamente mais tarde! </strong>");
+                    $('#success > .alert-danger')
+                            .append('</div>');
+
+                    $('#contactForm').trigger("reset");
                 },
             })
         },
-        filter: function() {
+        filter: function () {
             return $(this).is(":visible");
         },
     });
 
-    $("a[data-toggle=\"tab\"]").click(function(e) {
+    $("a[data-toggle=\"tab\"]").click(function (e) {
         e.preventDefault();
         $(this).tab("show");
     });
@@ -79,6 +69,6 @@ $(function() {
 
 
 /*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
+$('#name').focus(function () {
     $('#success').html('');
 });
