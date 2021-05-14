@@ -13,22 +13,10 @@ $(function () {
                 email: $("input#emailSub").val(),
                 data: ""
 
-            }
-
-            /*$.ajax({
-                type: 'POST',
-                url: "http://localhost:8443/subscribe/november",
-                data: JSON.stringify(subscribe),
-                error: function(e) {
-                  console.log(e);
-                },
-                dataType: "json",
-                contentType: "application/json"
-              });*/
-
+            };
             $.ajax({
-                url: "https://cyberoficina.herokuapp.com/subscribe/november",
-                //url: "http://localhost:8443/subscribe/november",
+                //url: "https://cyberoficina.herokuapp.com/subscribe/november",
+                url: "http://localhost:8443/subscribe/november",
                 headers: { 
                     'Content-Type': 'application/json' 
                 },
@@ -36,7 +24,9 @@ $(function () {
                 dataType: 'json',
                 data: JSON.stringify(subscribe),
                 cache: false,
-                success: function () {
+                
+                complete: function (xhr, textStatus) {
+                    if(xhr.status ==200){
                     // Success message
                     $('#successSubscribe').html("<div style='position: absolute; width: 90%' class='mt-2 alert alert-success'>");
                     $('#successSubscribe > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -49,16 +39,17 @@ $(function () {
 
                     //clear all fields
                     $('#subscribe').trigger("reset");
-                },
-                error: function () {
-                    // Fail message
-                    $('#successSubscribe').html("<div class='alert alert-danger'>");
-                    $('#successSubscribe > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + subscribe.email + ", aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
-                    $('#successSubscribe > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#subscribe').trigger("reset");
+                    }else{
+
+                        $('#successSubscribe').html("<div class='alert alert-danger'>");
+                        $('#successSubscribe > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                .append("</button>");
+                        $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + subscribe.email + ", aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
+                        $('#successSubscribe > .alert-danger').append('</div>');
+                        //clear all fields
+                        $('#subscribe').trigger("reset");
+
+                    }
                 },
             });
         },
