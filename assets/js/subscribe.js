@@ -8,15 +8,33 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var email = $("input#emailSub").val();
+
+            var subscribe = {
+                email: $("input#emailSub").val(),
+                data: ""
+
+            }
+
+            /*$.ajax({
+                type: 'POST',
+                url: "http://localhost:8443/subscribe/november",
+                data: JSON.stringify(subscribe),
+                error: function(e) {
+                  console.log(e);
+                },
+                dataType: "json",
+                contentType: "application/json"
+              });*/
 
             $.ajax({
-                url: "https://www.cyberoficina.com.br/subscribe",
-                //url: "http://localhost:8080/CyberOficina/subscribe",
-                type: "POST",
-                data: {
-                    email: email
+                url: "https://cyberoficina.herokuapp.com/subscribe/november",
+                //url: "http://localhost:8443/subscribe/november",
+                headers: { 
+                    'Content-Type': 'application/json' 
                 },
+                type: "POST",
+                dataType: 'json',
+                data: JSON.stringify(subscribe),
                 cache: false,
                 success: function () {
                     // Success message
@@ -24,7 +42,7 @@ $(function () {
                     $('#successSubscribe > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
                     $('#successSubscribe > .alert-success')
-                            .append("<strong>Obrigado! Em breve você receberá nossas novidades. </strong>");
+                            .append("<strong>Obrigado! Em breve vocÃª receberÃ¡ nossas novidades. </strong>");
                     $('#successSubscribe > .alert-success')
                             .append('</div>');
                     $('#successSubscribe').delay(5000).fadeOut('slow');
@@ -37,12 +55,12 @@ $(function () {
                     $('#successSubscribe').html("<div class='alert alert-danger'>");
                     $('#successSubscribe > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
-                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + email + ", aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
+                    $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + subscribe.email + ", aparentemente nossos servidores nÃ£o estÃ£o respondendo. Por favor tente novamente mais tarde!");
                     $('#successSubscribe > .alert-danger').append('</div>');
                     //clear all fields
                     $('#subscribe').trigger("reset");
                 },
-            })
+            });
         },
         filter: function () {
             return $(this).is(":visible");
