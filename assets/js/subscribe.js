@@ -15,8 +15,8 @@ $(function () {
 
             };
             $.ajax({
-                //url: "https://cyberoficina.herokuapp.com/subscribe/november",
-                url: "http://localhost:8443/subscribe/november",
+                url: "https://cyberoficina.herokuapp.com/subscribe/november",
+                //url: "http://localhost:8443/subscribe/november",
                 headers: { 
                     'Content-Type': 'application/json' 
                 },
